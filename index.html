@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Gestión - API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestión de Registros</h1>
+            <p>Interfaz conectada a Node.js + Express + MongoDB</p>
+        </header>
+
+        <section class="form-card">
+            <h2 id="form-title">Nuevo Registro</h2>
+            <form id="item-form">
+                <input type="hidden" id="item-id">
+                <div class="input-group">
+                    <label for="nombre">Nombre / Título</label>
+                    <input type="text" id="nombre" placeholder="Ej. Producto A" required>
+                </div>
+                <div class="input-group">
+                    <label for="descripcion">Descripción / Detalle</label>
+                    <input type="text" id="descripcion" placeholder="Ej. Descripción breve" required>
+                </div>
+                <div class="btn-group">
+                    <button type="submit" id="btn-submit" class="btn-primary">Guardar</button>
+                    <button type="button" id="btn-cancel" class="btn-secondary hidden">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Listado en Base de Datos</h2>
+            <div id="status-message" class="status"></div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID (Mongo)</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="items-table-body">
+                        <!-- Los datos se cargan dinámicamente con JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
