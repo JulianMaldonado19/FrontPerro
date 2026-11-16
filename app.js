@@ -1,5 +1,5 @@
 // CAMBIA ESTA URL POR LA RUTA REAL DE TU ENDPOINT
-const API_URL = 'https://perro-api.onrender.com/api/v1';
+const API_URL = 'https://perro-api.onrender.com/api/v1/perro';
 
 const form = document.getElementById('item-form');
 const formTitle = document.getElementById('form-title');
